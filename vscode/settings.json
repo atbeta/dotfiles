@@ -205,5 +205,6 @@
         "comments": {
             "fontStyle": "italic"
         }
-    }
+    },
+    "todo-tree.tree.showScanModeButton": false
 }
