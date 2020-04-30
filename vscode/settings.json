@@ -1,0 +1,194 @@
+{
+    "git.ignoreLegacyWarning": true,
+    "gitlens.advanced.messages": {
+        "suppressGitVersionWarning": true
+    },
+    "terminal.integrated.fontFamily": "'MesloLGS NF'",
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 14,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "vue"
+    ],
+    "sync.gist": "e43d9e8c008c84fdc5e7a1f5f98a69cf",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#6c5689",
+        "editor.selectionHighlightBackground": "#6c5689",
+        "statusBar.background": "#282a36",
+        "statusBar.noFolderBackground": "#282a36",
+        "statusBar.debuggingBackground": "#282a36"
+    },
+    "gitlens.views.repositories.files.layout": "tree",
+    "editor.suggestSelection": "first",
+    // "editor.fontFamily": "'Rec Mono Linear', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Operator Mono SSm Lig', Menlo, Monaco, 'Courier New', monospace",
+    // "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": "'ss01','ss05','ss08','dlig'",
+    "dart.debugExternalLibraries": true,
+    "dart.debugSdkLibraries": false,
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript"
+    },
+    "emmet.includeLanguages": {
+        "wxml": "html"
+    },
+    "minapp-vscode.disableAutoConfig": true,
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // 相对行号
+    "editor.lineNumbers": "relative",
+    // Vim 配置开始
+    "vim.ignorecase": false,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    // "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "d"],
+            "after": ["d", "d"]
+        },
+        {
+            "before": ["<C-n>"],
+            "commands": [":nohl"]
+        },
+        {
+            "before": ["<leader>", ":"],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        },
+        // 翻页
+        {
+            "before": ["<leader>", "k"],
+            "after": ["<C-u>"]
+        }, 
+        {
+            "before": ["<leader>", "j"],
+            "after": ["<C-d>"]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "after": ["0"]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "after": ["$"]
+        },
+        // 搜索替换
+        {
+            "before": ["leader", "leader", "f"],
+            "commands": ["actions.find"]
+        },
+        {
+            "before": ["leader", "leader", "r"],
+            "commands": ["editor.action.startFindReplaceAction"]
+        },
+        // 配合 Bookmarks 插件
+        {
+            "before": ["<leader>", "m"],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "commands": [
+                "bookmarks.list"
+            ]
+        },
+        // 窗口操作
+        {
+            "before": ["<leader>", "q"],
+            "commands": [
+                "workbench.action.closeActiveEditor",
+            ]
+        },
+        {
+            "before": ["<leader>", "s", "e"],
+            "commands": [
+                "workbench.action.splitEditor",
+            ]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": [
+                "workbench.view.explorer",
+            ]
+        },
+        {
+            "before": ["t", "n"],
+            "after": ["g", "t"]
+        },
+        {
+            "before": ["t", "p"],
+            "after": ["g", "T"]
+        },
+        {
+            "before": ["<leader>", "t", "n"],
+            "commands": [
+                "workbench.action.focusNextGroup",
+            ]
+        },
+        {
+            "before": ["<leader>", "t", "p"],
+            "commands": [
+                "workbench.action.focusPreviousGroup",
+            ]
+        },
+        {
+            "before": ["m", "r"],
+            "commands": [
+                "workbench.action.moveActiveEditorGroupRight",
+            ]
+        },
+        {
+            "before": ["m", "l"],
+            "commands": [
+                "workbench.action.moveActiveEditorGroupLeft",
+            ]
+        },
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "workbench.colorTheme": "Dracula",
+    "vim.easymotionMarkerFontSize": "12",
+     // 其他配置
+    "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+    // 缩略图样式
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 200,
+    "editor.minimap.showSlider": "always",
+    "editor.renderWhitespace": "all",
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": true,
+    // custom css and js
+    "vscode_custom_css.imports": [
+        "file:///Users/Beta/.config/vscode/custom_style.css"
+    ],
+    "vscode_custom_css.policy": true,
+    "editor.tokenColorCustomizations": {
+        "[Dracula]": {
+            "comments": {
+                "fontStyle": "italic"
+            }
+        }
+    },
+}
