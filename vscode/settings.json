@@ -5,7 +5,7 @@
     },
     "terminal.integrated.fontFamily": "'MesloLGS NF'",
     "files.autoSave": "afterDelay",
-    "editor.fontSize": 14,
+    "editor.fontSize": 15,
     "eslint.validate": [
         "javascript",
         "javascriptreact",
@@ -23,8 +23,8 @@
     "gitlens.views.repositories.files.layout": "tree",
     "editor.suggestSelection": "first",
     // "editor.fontFamily": "'Rec Mono Linear', Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontFamily": "'Operator Mono SSm Lig', Menlo, Monaco, 'Courier New', monospace",
-    // "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+    // "editor.fontFamily": "'Operator Mono SSm Lig', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": "'ss01','ss05','ss08','dlig'",
     "dart.debugExternalLibraries": true,
     "dart.debugSdkLibraries": false,
@@ -179,16 +179,31 @@
     "editor.smoothScrolling": true,
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": true,
-    // custom css and js
-    "vscode_custom_css.imports": [
-        "file:///Users/Beta/.config/vscode/custom_style.css"
+    // Todo tree config
+    "todo-tree.general.tags":[
+        "TODO",
+        "FIXME",
+        "todo",
+        "Todo"
     ],
-    "vscode_custom_css.policy": true,
-    "editor.tokenColorCustomizations": {
-        "[Dracula]": {
-            "comments": {
-                "fontStyle": "italic"
-            }
-        }
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "alert",
+        "type": "text",
+        "foreground": "#ed8794",
+        "background": "#282a36",
+        "opacity": 50,
+        "iconColour": "#e4a4a1"
     },
+    "terminal.integrated.cursorBlinking": true,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [ "keywords" ],
+                "settings": { "fontStyle": "bold" }
+            }
+        ],
+        "comments": {
+            "fontStyle": "italic"
+        }
+    }
 }
