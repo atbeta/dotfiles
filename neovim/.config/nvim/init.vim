@@ -1,6 +1,3 @@
-let g:python3_host_prog = expand('/usr/bin/python3')
-
-
 " ----- Editor Setup -----
 " General Settings
 " Need to know what exactly each line means
@@ -39,7 +36,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'mhinz/vim-startify'
-Plug 'Yggdroot/indentLine'
 " Jump
 Plug 'easymotion/vim-easymotion'
 " Completion and Syntax Highlighting
@@ -54,6 +50,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 " Tags view
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'liuchengxu/vista.vim'
 " Finder
@@ -63,7 +60,6 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
 " Comment
 Plug 'tpope/vim-commentary'
-Plug 'kassio/neoterm'
 call plug#end()
 
 "-----------themes----------"
@@ -77,6 +73,7 @@ let g:coc_global_extensions = ["coc-css",
             \ "coc-explorer",
             \ "coc-html",
             \ "coc-json",
+            \ "coc-git",
             \ "coc-emmet",
             \ "coc-prettier",
             \ "coc-python",
@@ -88,7 +85,7 @@ let g:coc_global_extensions = ["coc-css",
 "----------coc explorer----------"
 let g:coc_explorer_global_presets = {
 \   '.vim': {
-\      'root-uri': '~/projects',
+\      'root-uri': '~/Projects',
 \   },
 \   'floating': {
 \      'position': 'floating',
@@ -112,7 +109,7 @@ let g:coc_explorer_global_presets = {
 :nmap <space>ef :CocCommand explorer --preset floating<CR>
 
 " Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gm <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -167,6 +164,12 @@ endfunction
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tabs = 1
 
+" Vim Clap
+noremap <Leader>fi :Clap files<CR>
+noremap <Leader>bf :Clap buffers<CR>
+noremap <Leader>gr :Clap grep<CR>
+noremap <Leader><Leader>p :Clap<CR>
+
 " Vista.vim
 noremap <c-t> :silent! Vista coc<CR>
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
@@ -197,13 +200,7 @@ let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 "打开文件时不进行检查
 let g:ale_lint_on_enter = 1
-"Only run explicit linters
-let g:ale_linters_explicit = 1
-"Linter config
-let g:ale_fixers = {
-\   'javascript': ['prettier'],
-\   'css': ['prettier'],
-\}
+
 "普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
 nmap sp <Plug>(ale_previous_wrap)
 nmap sn <Plug>(ale_next_wrap)
@@ -214,14 +211,3 @@ nmap <Leader>d :ALEDetail<CR>
 let g:ale_linters = {
     \ 'go': ['golint', 'go vet', 'go fmt'],
     \ }
-
-"-----indnetLine config-----
-let g:indentLine_color_term = 239
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
-let g:neoterm_default_mod='belowright' " open terminal in bottom split
-let g:neoterm_size=16 " terminal split size
-let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
-nnoremap <leader><cr> :TREPLSendLine<cr>j " send current line and move down
-vnoremap <leader><cr> :TREPLSendSelection<cr> " send current selection
-
