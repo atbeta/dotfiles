@@ -50,8 +50,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 " Tags view
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'liuchengxu/vista.vim'
 " Finder
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
@@ -73,7 +71,6 @@ let g:coc_global_extensions = ["coc-css",
             \ "coc-explorer",
             \ "coc-html",
             \ "coc-json",
-            \ "coc-git",
             \ "coc-emmet",
             \ "coc-prettier",
             \ "coc-python",
@@ -89,19 +86,6 @@ let g:coc_explorer_global_presets = {
 \   },
 \   'floating': {
 \      'position': 'floating',
-\   },
-\   'floatingLeftside': {
-\      'position': 'floating',
-\      'floating-position': 'left-center',
-\      'floating-width': 50,
-\   },
-\   'floatingRightside': {
-\      'position': 'floating',
-\      'floating-position': 'left-center',
-\      'floating-width': 50,
-\   },
-\   'simplify': {
-\     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
 \   }
 \ }
 
@@ -109,7 +93,7 @@ let g:coc_explorer_global_presets = {
 :nmap <space>ef :CocCommand explorer --preset floating<CR>
 
 " Remap keys for gotos
-" nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gm <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -165,7 +149,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tabs = 1
 
 " Vim Clap
-noremap <Leader>fi :Clap files<CR>
+noremap <Leader>fl :Clap files<CR>
 noremap <Leader>bf :Clap buffers<CR>
 noremap <Leader>gr :Clap grep<CR>
 noremap <Leader><Leader>p :Clap<CR>
