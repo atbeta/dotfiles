@@ -43,12 +43,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 " Diagnostics
 Plug 'dense-analysis/ale'
 " Git integration
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'jiangmiao/auto-pairs'
+Plug 'zivyangll/git-blame.vim'
 " Tags view
 Plug 'liuchengxu/vista.vim'
 " Finder
@@ -153,6 +154,9 @@ noremap <Leader>fl :Clap files<CR>
 noremap <Leader>bf :Clap buffers<CR>
 noremap <Leader>gr :Clap grep<CR>
 noremap <Leader><Leader>p :Clap<CR>
+
+" Git blame
+nnoremap <Leader>gb :<C-u>call gitblame#echo()<CR>
 
 " Vista.vim
 noremap <c-t> :silent! Vista coc<CR>
