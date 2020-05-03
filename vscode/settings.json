@@ -169,8 +169,6 @@
     },
     "workbench.colorTheme": "Dracula",
     "vim.easymotionMarkerFontSize": "12",
-     // 其他配置
-    "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
     // 缩略图样式
     "editor.minimap.renderCharacters": false,
     "editor.minimap.maxColumn": 200,
@@ -206,5 +204,17 @@
             "fontStyle": "italic"
         }
     },
-    "todo-tree.tree.showScanModeButton": false
+    "todo-tree.tree.showScanModeButton": false,
+    "bracketPairColorizer.consecutivePairColors": [
+
+        "()",
+        "[]",
+        "{}",
+        [
+            "Gold",
+            "Orchid",
+            "LightSkyBlue"
+        ],
+        "Red"
+    ]
 }

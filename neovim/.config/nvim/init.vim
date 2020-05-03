@@ -199,3 +199,4 @@ nmap <Leader>d :ALEDetail<CR>
 let g:ale_linters = {
     \ 'go': ['golint', 'go vet', 'go fmt'],
     \ }
+
