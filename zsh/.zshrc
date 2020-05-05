@@ -99,4 +99,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init - zsh)"
 
+# Clangd path
+export PATH=$PATH:/usr/local//Cellar/llvm/10.0.0_3/bin
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

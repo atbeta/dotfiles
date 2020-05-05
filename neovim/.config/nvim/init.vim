@@ -54,11 +54,14 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'liuchengxu/vista.vim'
 " Finder
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
-"jsx and js
+" Languages
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
+Plug 'rust-lang/rust.vim'
 " Comment
 Plug 'tpope/vim-commentary'
+" Sinppets
+Plug 'honza/vim-snippets'
 call plug#end()
 
 "-----------themes----------"
