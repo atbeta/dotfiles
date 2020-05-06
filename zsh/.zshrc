@@ -42,7 +42,7 @@ zinit snippet PZT::modules/completion/init.zsh
 
 # Other plugins
 zinit light tj/git-extras
-
+zinit load agkozak/zsh-z
 
 ### End of Zinit's installer chunk
 
@@ -101,5 +101,3 @@ eval "$(jenv init - zsh)"
 
 # Clangd path
 export PATH=$PATH:/usr/local//Cellar/llvm/10.0.0_3/bin
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
