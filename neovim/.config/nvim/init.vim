@@ -80,9 +80,8 @@ let g:coc_global_extensions = ["coc-css",
             \ "coc-emmet",
             \ "coc-prettier",
             \ "coc-python",
-            \ "coc-tslint",
             \ "coc-tsserver",
-            \ "coc-ultisnips",
+            \ "coc-snippets",
             \ "coc-vetur"]
 
 "----------coc explorer----------"
