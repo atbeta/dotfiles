@@ -216,5 +216,11 @@
             "LightSkyBlue"
         ],
         "Red"
-    ]
+    ],
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "window.zoomLevel": 0,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

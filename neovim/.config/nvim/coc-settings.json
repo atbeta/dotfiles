@@ -73,8 +73,6 @@
   "explorer.buffer.showHiddenBuffers": false,
   "explorer.icon.enableNerdfont": true,
   "explorer.keyMappings": {
-   "i": "unmap",
- 
    "k": "nodePrev",
    "j": "nodeNext",
    "gk": "expandablePrev",
