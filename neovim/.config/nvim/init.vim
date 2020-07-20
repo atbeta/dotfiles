@@ -66,6 +66,7 @@ call plug#end()
 
 "-----------themes----------"
 set termguicolors
+let g:dracula_colorterm = 0
 colorscheme dracula
 "colorscheme onedark
 
@@ -73,14 +74,14 @@ colorscheme dracula
 let g:coc_global_extensions = ["coc-css",
             \ "coc-eslint",
             \ "coc-explorer",
+            \ "coc-git",
             \ "coc-html",
             \ "coc-json",
             \ "coc-emmet",
             \ "coc-prettier",
             \ "coc-python",
-            \ "coc-tslint",
             \ "coc-tsserver",
-            \ "coc-ultisnips",
+            \ "coc-snippets",
             \ "coc-vetur"]
 
 "----------coc explorer----------"

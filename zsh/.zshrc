@@ -42,7 +42,7 @@ zinit snippet PZT::modules/completion/init.zsh
 
 # Other plugins
 zinit light tj/git-extras
-
+zinit load agkozak/zsh-z
 
 ### End of Zinit's installer chunk
 
@@ -81,10 +81,11 @@ export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_mo
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
- export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
+# asdf
+. $HOME/.asdf/asdf.sh
+
+# rust
 source $HOME/.cargo/env
 export PATH="$PATH:$HOME/.local/share/flutter/bin"
 export PATH="$PATH:$HOME/.local/share/flutter/bin/cache/dart-sdk/bin"
@@ -101,5 +102,3 @@ eval "$(jenv init - zsh)"
 
 # Clangd path
 export PATH=$PATH:/usr/local//Cellar/llvm/10.0.0_3/bin
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

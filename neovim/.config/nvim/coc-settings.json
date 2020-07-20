@@ -62,6 +62,11 @@
   "git.enableGlobalStatus": false,
   "git.signOffset": 2,
   "python.pythonPath": "python",
+  "snippets.extends": {
+    "cpp": ["c"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
   "explorer.file.column.indent.indentLine": true,
   "explorer.file.showHiddenFiles": true,
   "explorer.keyMappingMode": false,
