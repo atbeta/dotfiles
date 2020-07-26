@@ -50,7 +50,7 @@ zinit load agkozak/zsh-z
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Vim mode default
-bindkey -v
+# bindkey -v
 
 # Custom alias
 proxy() {
