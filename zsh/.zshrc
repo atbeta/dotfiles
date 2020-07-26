@@ -49,6 +49,9 @@ zinit load agkozak/zsh-z
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Vim mode default
+bindkey -v
+
 # Custom alias
 proxy() {
     export https_proxy=http://127.0.0.1:6152
