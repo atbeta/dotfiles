@@ -71,10 +71,6 @@ alias cat='bat'
 alias ls='exa --icons --group-directories-first'
 alias help='tldr'
 
-# fzf alias
-alias vimf='vim $(fzf)'
-alias cdf='cd $(find * -type d | fzf)'
-
 # fzf config
 export FZF_DEFAULT_OPTS="--height 100% --layout=reverse --preview 'bat --color \"always\" {}'"
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build} --type f"
