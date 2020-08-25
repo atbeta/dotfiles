@@ -54,9 +54,9 @@ zinit load agkozak/zsh-z
 
 # Custom alias
 proxy() {
-    export https_proxy=http://127.0.0.1:6152
-    export http_proxy=http://127.0.0.1:6152
-    export all_proxy=socks5://127.0.0.1:6153
+    export https_proxy=http://127.0.0.1:7890
+    export http_proxy=http://127.0.0.1:7890
+    export all_proxy=socks5://127.0.0.1:7891
     echo "All proxy on"
 }
 unproxy() {
@@ -67,9 +67,9 @@ unproxy() {
 }
 
 alias vim='nvim'
-alias cat='bat'
-alias ls='exa --icons --group-directories-first'
-alias help='tldr'
+#alias cat='bat'
+#alias ls='exa --icons --group-directories-first'
+#alias help='tldr'
 
 # fzf config
 export FZF_DEFAULT_OPTS="--height 100% --layout=reverse --preview 'bat --color \"always\" {}'"
@@ -84,6 +84,9 @@ export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_mo
 # asdf
 . $HOME/.asdf/asdf.sh
 
+# yarn
+export PATH="$PATH:/opt/yarn/bin"
+
 # rust
 source $HOME/.cargo/env
 export PATH="$PATH:$HOME/.local/share/flutter/bin"
@@ -95,9 +98,3 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init - zsh)"
-
-# Clangd path
-export PATH=$PATH:/usr/local//Cellar/llvm/10.0.0_3/bin

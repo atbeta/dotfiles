@@ -87,7 +87,7 @@ let g:coc_global_extensions = ["coc-css",
 "----------coc explorer----------"
 let g:coc_explorer_global_presets = {
 \   '.vim': {
-\      'root-uri': '~/Projects',
+\      'root-uri': '~/projects',
 \   },
 \   'floating': {
 \      'position': 'floating',
